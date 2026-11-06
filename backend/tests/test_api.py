@@ -37,9 +37,9 @@ def test_featured_filter(client):
 
 
 def test_project_detail(client):
-    response = client.get("/api/projects/dashboard-analitik")
+    response = client.get("/api/projects/onlineshop-vue")
     assert response.status_code == 200
-    assert response.json()["slug"] == "dashboard-analitik"
+    assert response.json()["slug"] == "onlineshop-vue"
 
 
 def test_project_detail_not_found(client):

@@ -4,6 +4,7 @@ import { computed, onMounted, reactive } from 'vue'
 import About from '../components/About.vue'
 import Contact from '../components/Contact.vue'
 import Experience from '../components/Experience.vue'
+import FloatingPhotos from '../components/FloatingPhotos.vue'
 import Hero from '../components/Hero.vue'
 import Projects from '../components/Projects.vue'
 import Skills from '../components/Skills.vue'
@@ -19,7 +20,7 @@ const state = reactive({
 })
 
 const stats = computed(() => [
-  { label: 'Tahun pengalaman', value: '3+' },
+  { label: 'Tahun pengalaman', value: '2' },
   { label: 'Proyek dibangun', value: String(state.projects.length) },
   { label: 'Teknologi dikuasai', value: String(state.skills.length) },
 ])
@@ -36,6 +37,7 @@ async function load() {
       api.getExperiences(),
     ])
     Object.assign(state, { profile, skills, projects, experiences })
+    document.title = `Portofolio — ${profile.name}`
   } catch (error) {
     state.error = error.message
   } finally {
@@ -66,6 +68,7 @@ onMounted(load)
     </div>
 
     <template v-else-if="state.profile">
+      <FloatingPhotos />
       <Hero :profile="state.profile" />
       <About :profile="state.profile" :stats="stats" />
       <Skills :skills="state.skills" />
@@ -77,6 +80,10 @@ onMounted(load)
 </template>
 
 <style scoped>
+.home {
+  position: relative;
+}
+
 .home__loading {
   display: grid;
   gap: 1rem;

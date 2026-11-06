@@ -13,22 +13,21 @@ def seed_database(db: Session) -> None:
 
     db.add(
         Profile(
-            name="Nama Kamu",
+            name="Luthfy Eryan Wisesa",
             headline="Full-Stack Developer & UI Enthusiast",
             bio=(
-                "Halo! Saya seorang developer yang suka membangun produk digital "
+                "Halo! Saya seorang developer yang ingin mencoba membangun produk digital "
                 "yang rapi, cepat, dan nyaman dipakai. Fokus saya ada di pengembangan "
                 "antarmuka modern dengan Vue.js serta API yang andal dengan Python. "
                 "Di luar coding, saya senang mengeksplorasi desain dan berbagi ilmu."
             ),
-            location="Jakarta, Indonesia",
-            email="hello@example.com",
-            avatar="/images/avatar.svg",
+            location="Bandung, Indonesia",
+            email="lewvoldigoad@gmail.com",
+            avatar="/images/foto.jpg",
             resume_url="#",
             socials=[
-                {"label": "GitHub", "url": "https://github.com/username"},
-                {"label": "LinkedIn", "url": "https://linkedin.com/in/username"},
-                {"label": "Instagram", "url": "https://instagram.com/username"},
+                {"label": "GitHub", "url": "https://github.com/Luthfy-Eryan"},
+                {"label": "Instagram", "url": "https://instagram.com/luthfyeryanw"},
             ],
         )
     )
@@ -48,110 +47,53 @@ def seed_database(db: Session) -> None:
 
     projects = [
         Project(
-            slug="dashboard-analitik",
-            title="Dashboard Analitik",
-            summary="Dashboard interaktif untuk memantau metrik bisnis secara real-time.",
+            slug="onlineshop-vue",
+            title="OnlineShop-vue",
+            summary="Aplikasi toko online yang dibangun sepenuhnya dengan Vue.js.",
             description=(
-                "Dashboard analitik yang menampilkan data penjualan, trafik, dan performa "
-                "kampanye dalam satu tampilan. Dibangun dengan Vue 3 di sisi klien dan "
-                "FastAPI sebagai penyedia data. Mendukung filter periode, grafik responsif, "
-                "serta mode gelap/terang."
+                "Aplikasi toko online yang dibangun sepenuhnya dengan Vue.js. "
+                "Menampilkan daftar produk, keranjang belanja, dan alur checkout "
+                "sederhana dengan antarmuka yang responsif."
             ),
-            tags=["Vue.js", "FastAPI", "Chart.js"],
+            tags=["Vue.js"],
             image="/images/project-dashboard.svg",
-            repo_url="https://github.com/username/dashboard-analitik",
+            repo_url="https://github.com/username/onlineshop-vue",
             demo_url="#",
             year=2026,
             featured=True,
             order=1,
         ),
         Project(
-            slug="aplikasi-manajemen-tugas",
-            title="Aplikasi Manajemen Tugas",
-            summary="Aplikasi kolaboratif untuk mengatur proyek dan tugas tim.",
+            slug="store",
+            title="Store",
+            summary="Website toko sederhana dengan HTML, CSS, dan JavaScript murni.",
             description=(
-                "Aplikasi kanban sederhana dengan fitur drag-and-drop, label, dan tenggat "
-                "waktu. Autentikasi berbasis JWT, penyimpanan data di PostgreSQL, dan "
-                "antarmuka yang ringan. Cocok untuk tim kecil yang butuh alat kolaborasi "
-                "tanpa biaya langganan."
+                "Website toko sederhana yang dibangun dengan HTML, CSS, dan JavaScript "
+                "murni tanpa framework. Menampilkan katalog produk, pencarian, dan "
+                "keranjang belanja ringan."
             ),
-            tags=["Vue.js", "FastAPI", "PostgreSQL"],
+            tags=["HTML", "CSS", "JavaScript"],
             image="/images/project-tasks.svg",
-            repo_url="https://github.com/username/manajemen-tugas",
+            repo_url="https://github.com/username/store",
             demo_url="#",
             year=2025,
-            featured=True,
+            featured=False,
             order=2,
-        ),
-        Project(
-            slug="aplikasi-cuaca",
-            title="Aplikasi Cuaca",
-            summary="Prakiraan cuaca dengan visualisasi data yang bersih dan cepat.",
-            description=(
-                "Aplikasi cuaca yang mengambil data dari API publik dan menyajikannya "
-                "dalam kartu-kartu ringkas. Menampilkan prakiraan harian, kelembapan, "
-                "kecepatan angin, dan suhu per jam. Dibuat sebagai eksplorasi animasi "
-                "dan micro-interaction di Vue."
-            ),
-            tags=["Vue.js", "REST API", "CSS"],
-            image="/images/project-weather.svg",
-            repo_url="https://github.com/username/aplikasi-cuaca",
-            demo_url="#",
-            year=2025,
-            featured=False,
-            order=3,
-        ),
-        Project(
-            slug="api-ecommerce",
-            title="API E-Commerce",
-            summary="REST API untuk katalog produk, keranjang, dan pemesanan.",
-            description=(
-                "API backend dengan dokumentasi OpenAPI otomatis, mencakup manajemen "
-                "produk, keranjang belanja, dan alur pemesanan. Dilengkapi validasi "
-                "input, migrasi database, serta pengujian endpoint menggunakan pytest."
-            ),
-            tags=["Python", "FastAPI", "SQLAlchemy"],
-            image="/images/project-api.svg",
-            repo_url="https://github.com/username/api-ecommerce",
-            demo_url="#",
-            year=2024,
-            featured=False,
-            order=4,
         ),
     ]
     db.add_all(projects)
 
     experiences = [
         Experience(
-            role="Frontend Developer",
-            company="Studio Digital Nusantara",
-            period="2024 — Sekarang",
+            role="Backend Developer",
+            company="Siswa SMA/SMK",
+            period="2025 — Sekarang",
             description=(
-                "Mengembangkan antarmuka aplikasi web menggunakan Vue.js, berkolaborasi "
-                "dengan tim desain untuk menjaga konsistensi design system, dan "
-                "meningkatkan performa halaman hingga 35%."
+                "Pelajar kelas 10-11 yang mulai menekuni backend development sejak 2025. "
+                "Membangun REST API dengan Python dan FastAPI, merancang database, serta "
+                "menulis pengujian otomatis untuk proyek pribadi dan pembelajaran."
             ),
             order=1,
-        ),
-        Experience(
-            role="Backend Developer (Intern)",
-            company="PT Teknologi Cepat",
-            period="2023 — 2024",
-            description=(
-                "Membangun REST API dengan FastAPI dan PostgreSQL, menulis pengujian "
-                "otomatis, serta membantu proses deployment ke lingkungan staging."
-            ),
-            order=2,
-        ),
-        Experience(
-            role="Freelance Web Developer",
-            company="Berbagai klien",
-            period="2022 — Sekarang",
-            description=(
-                "Mengerjakan landing page dan company profile untuk UMKM, mulai dari "
-                "desain, implementasi frontend, hingga penyebaran ke hosting."
-            ),
-            order=3,
         ),
     ]
     db.add_all(experiences)

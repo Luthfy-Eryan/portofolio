@@ -34,8 +34,8 @@ onUnmounted(() => {
   <header class="nav" :class="{ 'nav--scrolled': scrolled }">
     <div class="container nav__inner">
       <RouterLink to="/" class="nav__brand" aria-label="Kembali ke beranda" @click="closeMenu">
-        <span class="nav__logo">NK</span>
-        <span class="nav__name">Nama Kamu</span>
+        <span class="nav__logo">LEW</span>
+        <span class="nav__name">Luthfy Eryan Wisesa</span>
       </RouterLink>
 
       <nav class="nav__links" :class="{ 'is-open': open }" aria-label="Navigasi utama">

@@ -17,11 +17,13 @@ async function load(slug) {
 
   try {
     project.value = await api.getProject(slug)
+    document.title = `${project.value.title} — Luthfy Eryan Wisesa`
   } catch (err) {
     error.value =
       err.status === 404
         ? 'Proyek tidak ditemukan atau sudah dipindahkan.'
         : err.message
+    document.title = 'Proyek tidak ditemukan — Luthfy Eryan Wisesa'
   } finally {
     loading.value = false
   }

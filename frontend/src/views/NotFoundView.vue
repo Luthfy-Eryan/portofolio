@@ -1,3 +1,7 @@
+<script setup>
+document.title = 'Halaman tidak ditemukan — Luthfy Eryan Wisesa'
+</script>
+
 <template>
   <div class="not-found container">
     <span class="not-found__code">404</span>
