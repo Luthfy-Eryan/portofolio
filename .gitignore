@@ -14,6 +14,9 @@ frontend/dist/
 .vite/
 *.local
 
+# Vercel
+.vercel/
+
 # Editors / OS
 .DS_Store
 .vscode/
