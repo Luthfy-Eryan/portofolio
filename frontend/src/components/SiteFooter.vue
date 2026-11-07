@@ -1,20 +1,16 @@
-<script setup>
-const year = new Date().getFullYear()
-</script>
-
 <template>
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="footer__logo">NK</span>
+        <span class="footer__logo">LEW</span>
         <div>
-          <strong>Nama Kamu</strong>
+          <strong>Luthfy Eryan Wisesa</strong>
           <p>Full-Stack Developer & UI Enthusiast</p>
         </div>
       </div>
 
       <p class="footer__copy">
-        © {{ year }} Nama Kamu. Dibangun dengan Vue.js & FastAPI.
+        © Portofolio Luthfy Eryan Wisesa. Dibangun dengan Vue.js & FastAPI.
       </p>
 
       <a class="footer__top" href="#beranda">Kembali ke atas ↑</a>
