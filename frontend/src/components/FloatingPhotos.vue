@@ -116,8 +116,23 @@ function onImageError(event) {
 }
 
 @media (max-width: 1024px) {
-  .floating-photos {
-    display: none;
+  .floating-photos__slot {
+    width: clamp(70px, 10vw, 110px);
+  }
+
+  .floating-photos__frame {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-photos__slot {
+    width: clamp(56px, 20vw, 80px);
+  }
+
+  .floating-photos__frame {
+    padding: 0.3rem 0.3rem 1rem;
+    opacity: 0.32;
   }
 }
 </style>
